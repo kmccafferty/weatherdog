@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 var here;
 var weather;
 
-var baseurl = "http://localhost:8888/weatherdog";
+var baseurl = "http://kmccafferty.github.io/weatherdog";
 
 function errorWeather(){
   $('#weathercap').append(
