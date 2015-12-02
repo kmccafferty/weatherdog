@@ -1,0 +1,359 @@
+/********************************/
+
+
+/******** MAIN STYLES ***********/
+
+
+/********************************/
+
+body {
+    margin: 0 !important;
+    background-color: grey;
+}
+
+#container {
+    height: 405px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-color: grey;
+}
+
+#dog,
+#land,
+.rain,
+.snow,
+.sweat,
+#umbrella,
+#snowface, #lightening, .blinkers,
+.sunclouds {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    transform: translate(50% 0);
+    left: 0px;
+    top: 60px;
+    bottom: 40px;
+    right: 0px;
+}
+
+#weathercap {
+    background-color: white;
+    display: block;
+    margin-top: 0;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: .9em;
+    letter-spacing: 1px;
+    color: #525252;
+}
+
+#whereareyou {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    /*padding-top:5px;*/
+    bottom: 0%;
+    top: 85%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    font-family: Helvetica;
+    letter-spacing: 1px;
+    color: #525252;
+}
+
+#userform {
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 200px;
+    font-family: Helvetica;
+    font-size: 1em;
+}
+
+button {
+    background-color: #C7472A;
+    color: white;
+    height: 25px;
+    width: 70px;
+    font-family: Helvetica;
+    font-style: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    border: none;
+}
+
+button:hover {
+    background-color: #C7472A;
+}
+
+button:focus {
+    background-color: #C7472A;
+    outline: none;
+}
+
+
+/********************************/
+
+
+/******** MEDIA QUERIES ***********/
+
+
+/********************************/
+
+@media only screen and (min-width:500px) {
+    #container {
+        height: 405px;
+        width: 100%;
+        margin: 0;
+    }
+    #dog,
+    #land,
+    .rain,
+    .snow,
+    .sweat,
+    #umbrella,
+    #snowface, #lightening, .blinkers,
+    .sunclouds {
+        top: 15%;
+        left: 0;
+        /*right:100%;*/
+        width: 90%;
+        height: 120%;
+    }
+    #userform {
+        margin-top: 15px;
+    }
+    input {
+        text-align: center;
+        -webkit-appearance: none;
+        border-radius: 0;
+        border: 1px solid #DBDBDB;
+        color: grey;
+        height: 30px;
+    }
+    button {
+        height: 30px;
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    input {
+        margin-top: 8px;
+        height: 25px;
+        width: 89%;
+        text-align: center;
+        -webkit-appearance: none;
+        border-radius: 0;
+        border: 1px solid #DBDBDB;
+        color: grey;
+    }
+    button {
+        height: 40px;
+        width: 90%;
+        font-size: 1em;
+        letter-spacing: 1.5px;
+        margin-top: 8px;
+    }
+}
+
+
+/********************************/
+
+
+/********* ANIMATIONS ***********/
+
+
+/********************************/
+
+
+/*RAIN*/
+
+#mrain {
+    -webkit-animation: raining 3s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#srain {
+    -webkit-animation: raining 4s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#frain {
+    -webkit-animation: raining 1.5s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#lightening{
+    -webkit-animation: lightening 5s 1s;
+    -webkit-animation-iteration-count:infinite;
+}
+
+/*CHRISTMAS*/
+#blinkers_red{
+    -webkit-animation: blinking 2s 1s;
+    -webkit-animation-iteration-count:infinite;
+}
+#blinkers_blue{
+    -webkit-animation: blinking 1s 1s;
+    -webkit-animation-iteration-count:infinite;
+}
+#blinkers_yellow{
+    -webkit-animation: blinking 4s 1s;
+    -webkit-animation-iteration-count:infinite;
+}
+#blinkers_green{
+    -webkit-animation: blinking 4s 3s;
+    -webkit-animation-iteration-count:infinite;
+}
+
+#wren_body{
+    -webkit-animation: wren 2s 2s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+
+/*SNOW*/
+
+#srsnow {
+    -webkit-animation: raining 6s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#ssnow {
+    -webkit-animation: raining 2s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#msnow {
+    -webkit-animation: raining 4s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#fsnow {
+    -webkit-animation: raining 5s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+/*SWEAT*/
+
+#sweat01 {
+    -webkit-animation: sweating 2s 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#sweat02 {
+    -webkit-animation: sweating 1.5s .5s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+/*CLOUDS*/
+
+#suncloud01, #stormcloud01 {
+    -webkit-animation: cloudyone 5s .5s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#suncloud02, #stormcloud02 {
+    -webkit-animation: cloudytwo 4s .5s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#suncloud03, #stormcloud03 {
+    -webkit-animation: cloudyone 4s .5s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes raining {
+    0% {
+        opacity: 0;
+    }
+    20%,
+    50% {
+        opacity: 1;
+    }
+    60%,
+    100% {
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(0, 20%);
+    }
+}
+
+@-webkit-keyframes lightening {
+    0% { opacity:0;}
+    20%{opacity:.3;}
+    30%, 70% {opacity:0;}
+    80%{opacity:.5;}
+    100%{opacity:0;}
+}
+
+@-webkit-keyframes blinking{
+    0%{ opacity:0;}
+    50%{ opacity:1; }
+    100%{ opacity:0; }
+
+}
+
+@-webkit-keyframes wren {
+    0%{ -webkit-transform: translate(0, 0);}
+    50%{ -webkit-transform: translate(0, 2%);}
+    100%{ -webkit-transform: translate(0, 0%); }
+
+}
+
+
+@-webkit-keyframes sweating {
+    0% {
+        opacity: 0;
+    }
+    20%,
+    50% {
+        opacity: 1;
+    }
+    60%,
+    100% {
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(0, 2%);
+    }
+}
+
+@-webkit-keyframes cloudyone {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(5%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes cloudytwo {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(-5%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
