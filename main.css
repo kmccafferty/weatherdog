@@ -25,7 +25,10 @@ body {
 .snow,
 .sweat,
 #umbrella,
-#snowface, #lightening, .blinkers,
+.fog,
+#snowface,
+#lightening, 
+.blinkers,
 .sunclouds {
     height: auto;
     width: 100%;
@@ -120,6 +123,7 @@ button:focus {
     #land,
     .rain,
     .snow,
+    .fog,
     .sweat,
     #umbrella,
     #snowface, #lightening, .blinkers,
@@ -277,6 +281,21 @@ button:focus {
     -webkit-animation-iteration-count: infinite;
 }
 
+#fog01{
+    -webkit-animation: fogone 3s 2s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+#fog02{
+    -webkit-animation: fogone 2s 5s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+#fog03{
+    -webkit-animation: fogone 2s .5s ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+
 @-webkit-keyframes raining {
     0% {
         opacity: 0;
@@ -314,6 +333,21 @@ button:focus {
     50%{ -webkit-transform: translate(0, 2%);}
     100%{ -webkit-transform: translate(0, 0%); }
 
+}
+
+@-webkit-keyframes fogone {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity:.25;
+    }
+    30% { opacity:1; }
+    50% {
+        -webkit-transform: translate(1.5%, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        opacity:.25;
+    }
 }
 
 

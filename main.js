@@ -117,11 +117,26 @@ function getWeather(){
         || conditions == "Light Rain"){
           // SHOW PUDDLES, FALLING RAIN, & UMBRELLA
           $(".landscape").append('<img id="land" src="'+baseurl+'/land/Rainy_Back.svg" alt="Rainy Land"></img>');
-          $(".conditions").append(
-              '<img class="rain" id="frain" src="'+baseurl+'/weather/rain_fast.svg" alt="Fast Rain"></img>'+
-              '<img class="rain" id="mrain" src="'+baseurl+'/weather/rain_med.svg" alt="Medium Rain"></img>'+
-              '<img class="rain" id="srain" src="'+baseurl+'/weather/rain_slow.svg" alt="Slow Rain"></img>');
-          $(".objects").append('<img id="umbrella" src="'+baseurl+'/extra/umbrella.svg" alt="Umbrella"></img>');
+           $(".conditions").append(
+-              '<img class="rain" id="frain" src="'+baseurl+'/weather/rain_fast.svg" alt="Fast Rain"></img>'+
+-              '<img class="rain" id="mrain" src="'+baseurl+'/weather/rain_med.svg" alt="Medium Rain"></img>'+
+-              '<img class="rain" id="srain" src="'+baseurl+'/weather/rain_slow.svg" alt="Slow Rain"></img>');
+-          $(".objects").append('<img id="umbrella" src="'+baseurl+'/extra/umbrella.svg" alt="Umbrella"></img>');
+
+      //FOR FOG
+       } else if ( conditions == "Fog"
+        || conditions == "Freezing Fog"
+        || conditions == "Patches of Fog"
+        || conditions == "Fog Patches"
+        || conditions == "Shallow Fog"
+        || conditions == "Partial Fog"
+        || conditions == "Haze"){
+        //SHOW FOG
+        $(".conditions").append('<img class="sunclouds" id="suncloud01" src="'+baseurl+'/weather/suncloud_01.svg" alt="Cloud01"></img>'+
+              '<img class="sunclouds" id="suncloud02" src="'+baseurl+'/weather/suncloud_02.svg" alt="Cloud02"></img>'+
+              '<img class="sunclouds" id="suncloud03" src="'+baseurl+'/weather/suncloud_03.svg" alt="Cloud03"></img>'+
+              '<img class="fog" src="'+baseurl+'/weather/fog_main.svg" alt="Fog"></img>');
+
 
       //FOR THUNDERSTORMS
       } else if ( conditions == "Thunderstorm"
