@@ -172,8 +172,8 @@ function getWeather(){
 } // END getWeather FUNCTION
 
 var today = new Date();
-var hannukahStart = new Date(2015, 11, 06);
-var hannukahEnd = new Date(2015, 11, 14);
+var hanukkahStart = new Date(2015, 11, 06);
+var hanukkahEnd = new Date(2015, 11, 14);
 var newyearStart = new Date(2015, 11, 31);
 var newyearEnd = new Date(2016, 00, 01);
 
@@ -201,10 +201,10 @@ $(window).load(function() {
         console.log("MERRY CHRISTMAS!");
 
     //HANUKKAH
-    } else if ( hannukahStart <= today && hannukahEnd >= today ){
+    } else if ( hanukkahStart <= today && hanukkahEnd >= today ){
       $('#weathercap').append(
           "<p class='caption'>Brógan says <strong>חנוכה שמח</strong>, roo roo!</p>");
-      $(".brogan").append('<img id="dog" src="'+baseurl+'/dog/Hannukah_dog.svg" alt="Hanukkah Brógan"></img>');
+      $(".brogan").append('<img id="dog" src="'+baseurl+'/dog/Hanukkah_Dog.svg" alt="Hanukkah Brógan"></img>');
       $(".landscape").append('<img id="land" src="'+baseurl+'/land/SnowyNight_Back.svg" alt="Snowy Nighttime Land"></img>');
       $(".conditions").append(
             '<img class="blinkers" id="blinkers_red" src="'+baseurl+'/extra/Stars01.svg" alt="Stars01"></img>'+
