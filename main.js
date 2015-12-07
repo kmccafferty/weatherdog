@@ -112,6 +112,7 @@ function getWeather(){
     		|| conditions == "Drizzle" 
         || conditions == "Light Drizzle"
     		|| conditions == "Rain Showers"
+        || conditions == "Light Rain Showers"
     		|| conditions == "Rain Mist"
     		|| conditions == "Hail Showers"
         || conditions == "Light Rain"){
@@ -193,12 +194,10 @@ var newyearStart = new Date(2015, 11, 31);
 var newyearEnd = new Date(2016, 00, 01);
 
 
-//Default display when Page Loads
-$(window).load(function() {
+//DEFAULT WEATHER DISPLAY
+function defaultWeather(){
 
-    //Displays for Holidays and Special Dates
-    //CHRISTMAS 
-    if (new Date().toString().indexOf("Dec 25") > -1) {
+  if (new Date().toString().indexOf("Dec 25") > -1) {
         $('#weathercap').append(
           "<p class='caption'>Brógan says <strong>Happy Christmas</strong>, roo roo!</p>");
         $(".brogan").append('<img id="dog" src="'+baseurl+'/dog/Christmas_dog.svg" alt="Christmas Brógan"></img>');
@@ -262,17 +261,17 @@ $(window).load(function() {
             '<img class="blinkers" id="blinkers_green" src="'+baseurl+'/extra/Stars03.svg" alt="Stars03"></img>');
         console.log("HAPPY NEW YEAR!");
 
+    // Default to Cleveland    
     } else {
 
       //Default Display
         here = 44070
         getWeather();
     }
-
     $('input').val('Enter a location');
-});
+}
 
-
+//When User Submits Own Location
 function userWeather(){
   event.preventDefault();
   here = $('input').val()
@@ -280,9 +279,20 @@ function userWeather(){
   getWeather();
 };
 
+
+//Set Display to Default when Page Loads
+$(window).load(function() {
+  defaultWeather();
+});
+
 //User submits their location
-$('button').click(function(){
+$('#button').click(function(){
   userWeather();
+});
+
+$('#reset').click(function(){
+  defaultWeather();
+
 });
 
 
