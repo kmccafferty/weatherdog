@@ -200,7 +200,7 @@ function defaultWeather(){
   if (new Date().toString().indexOf("Dec 25") > -1) {
         $('#weathercap').append(
           "<p class='caption'>Brógan says <strong>Happy Christmas</strong>, roo roo!</p>");
-        $(".brogan").append('<img id="dog" src="'+baseurl+'/dog/Christmas_dog.svg" alt="Christmas Brógan"></img>');
+        $(".brogan").append('<img id="dog" src="'+baseurl+'/dog/Christmas_Dog.svg" alt="Christmas Brógan"></img>');
         $(".landscape").append('<img id="land" src="'+baseurl+'/land/SnowyNight_Back.svg" alt="Snowy Nightime Land"></img>');
         $(".conditions").append(
             '<img class="blinkers" src="'+baseurl+'/extra/Stars01.svg" alt="Stars01"></img>'+
